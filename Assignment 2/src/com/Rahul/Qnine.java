@@ -63,7 +63,7 @@ public class Qnine {
 	        System.out.print("Enter scored marks (1 to 100): ");
 	        if (sc.hasNextInt()) {
 	            studentDetails[2] = sc.nextInt();
-	            sc.nextLine(); // consume newline
+	            sc.nextLine();
 	        } else {
 	            System.out.println("Invalid input for marks. Please enter an integer.");
 	            sc.close();

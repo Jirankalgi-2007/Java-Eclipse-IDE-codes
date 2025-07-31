@@ -28,8 +28,19 @@ public class Qseven {
 	        int count = 0;
 
 	        for (int i = 0; i < input.length; i++) {
-	            if (input[i].matches("[a-zA-Z]+")) {
-	                temp[count] = input[i];
+	            String word = input[i];
+	            boolean isAlphabetic = true;
+
+	            for (int j = 0; j < word.length(); j++) {
+	                char c = word.charAt(j);
+	                if (!Character.isLetter(c)) {
+	                    isAlphabetic = false;
+	                    break;
+	                }
+	            }
+
+	            if (isAlphabetic) {
+	                temp[count] = word;
 	                count++;
 	            }
 	        }
